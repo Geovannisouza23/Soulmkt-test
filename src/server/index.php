@@ -1,4 +1,15 @@
 <?php
+// Definir cabeçalhos CORS
+header("Access-Control-Allow-Origin: *"); // Permitir todas as origens (pode restringir para um domínio específico)
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS"); // Métodos permitidos
+header("Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With"); // Cabeçalhos permitidos
+
+// Se for uma requisição OPTIONS, responder rapidamente sem processamento adicional
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    http_response_code(200);
+    exit();
+}
+
 class ProductProcessor
 {
     private $separator;
