@@ -11,7 +11,7 @@ $(document).ready(function() {
         var formData = new FormData(this);
 
         $.ajax({
-            url: '../src/server/index.php', // Caminho atualizado
+            url: 'http://localhost:8101', // Caminho atualizado
             type: 'POST',
             data: formData,
             processData: false,
