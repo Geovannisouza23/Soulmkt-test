@@ -1,16 +1,28 @@
 version: '3.8'
 
 services:
-  php-docker-app:
+  index:
     build: .
-    container_name: php-docker-app
+    container_name: index-container
     ports:
-      - "8101:8101" # Mapeando a porta do aplicativo para a porta do host
+      - "8080:80"
     volumes:
-      - .:/var/www/html # Montando o diretório atual para atualizações em tempo real
+      - .:/var/www/html
     networks:
-      - app-network
+      - webnet
+    depends_on:
+      - server  # Assegura que o contêiner do servidor esteja disponível antes de iniciar o contêiner index
+
+  server:
+    build: src/server/.
+    container_name: server-container
+    ports:
+      - "8101:8101"
+    volumes:
+      - ./src/server:/var/www/html
+    networks:
+      - webnet
 
 networks:
-  app-network:
-    driver: bridge # Definindo o tipo de rede como "bridge"
+  webnet:
+    driver: bridge
