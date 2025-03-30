@@ -28,11 +28,9 @@ $baseUrl = "http://localhost:8101/";
 $paths = [
     "index.html",
     "src/server/index.php",
-    "src/testes/ProductProcessorTest.php",
+    "src/testes/indexTest.php",
     "src/services/script.js",
-    "src/services/styles.css",
-    "src/App/paginacliente.html",
-    "src/App/paginacliente.css"
+    "src/services/styles.css"
 ];
 
 checkLinks($baseUrl, $paths);
