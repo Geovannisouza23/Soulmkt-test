@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload de Produtos</title>
+    <link rel="stylesheet" href="src/services/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Upload de Planilha de Produtos</h1>
+
+    <form id="uploadForm" action="src/server/index.php" method="POST" enctype="multipart/form-data">
+        <label for="fileInput">Selecione uma planilha CSV:</label>
+        <input type="file" id="fileInput" name="fileInput" required>
+        <label for="separator">Selecione o separador:</label>
+        <select id="separator" name="separator">
+            <option value=",">Vírgula (",")</option>
+            <option value=";">Ponto e vírgula (";")</option>
+        </select>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Código</th>
+                <th>Preço</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Produtos serão inseridos aqui via AJAX -->
+        </tbody>
+    </table>
+
+    <script src="src/services/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  php-docker-app:
+    build: .
+    container_name: php-docker-app
+    ports:
+      - "8101:8101" # Mapeando a porta do aplicativo para a porta do host
+    volumes:
+      - .:/var/www/html # Montando o diretório atual para atualizações em tempo real
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge # Definindo o tipo de rede como "bridge"
