@@ -1,4 +1,4 @@
-# Teste-PHP-HTML-Soulmkt-
+# Teste-PHP-Soulmkt-
 # Instruções de uso
 
 1. Clone o repositório para sua máquina local.
