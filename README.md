@@ -8,3 +8,4 @@
 5. A tabela será gerada com os dados ordenados. Linhas com preços negativos serão coloridas de vermelho.
 6. Para códigos de produto com números pares, um botão "Copiar" estará disponível, permitindo copiar os dados para a área de transferência.
 
+7. Para realizar o teste pelo PHPUnit, abra a pasta src/teste no terminal e digite o comando 'composer require --dev "phpunit/phpunit:^9.5"" em seguida "./vendor/bin/phpunit indexTest.php"
