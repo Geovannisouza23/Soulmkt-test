@@ -12,6 +12,15 @@ th, td {
     text-align: left;
 }
 
+/* Fixar cabeçalhos no topo ao rolar */
+thead th {
+    position: sticky;
+    top: 0;
+    background: white; /* Para manter visível */
+    z-index: 1000;
+}
+
+/* Estilização do botão */
 button {
     background-color: #4CAF50;
     color: white;
@@ -24,6 +33,27 @@ button:hover {
     background-color: #45a049;
 }
 
+/* Linha vermelha para produtos inválidos */
 tr.red {
     background-color: red;
 }
+/* Estilo da mensagem personalizada */
+.message-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    display: none;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Cores para mensagens de erro e sucesso */
+.message-box.success { background-color: #4CAF50; }
+.message-box.error { background-color: #E74C3C; }
