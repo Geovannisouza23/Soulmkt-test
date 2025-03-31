@@ -1,5 +1,5 @@
 {
-    "name": "vendor/Soulmkt-Teste",
+    "name": "vendor/Soulmkt-teste",
     "description": "indextest",
     "require-dev": {
         "phpunit/phpunit": "^9.5"
